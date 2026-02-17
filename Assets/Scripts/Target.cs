@@ -327,6 +327,8 @@ public class Target : MonoBehaviour
     {
         StopAllCoroutines();
         animator.SetTrigger(shotDownTrigger);
+
+        FindFirstObjectByType<ScoreManager>().AddScore(10);
     }
 
     public void GoBack()
